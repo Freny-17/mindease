@@ -13,7 +13,7 @@ class InnerGuideService {
 
 
 
-  final String systemPrompt = """
+  final String systemPrompt = """   
 
 You are a calm and supportive mental wellness assistant designed to help students and young adults think clearly during stressful situations.
 
