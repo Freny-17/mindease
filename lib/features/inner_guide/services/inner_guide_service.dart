@@ -9,7 +9,7 @@ class InnerGuideService {
 
 // 🔑 Paste your GROQ API key here
 
-  // final String apiKey = "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";
+
 
 
 
