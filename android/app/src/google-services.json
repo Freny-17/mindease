@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "338180766481",
+    "project_id": "mindease-eae71",
+    "storage_bucket": "mindease-eae71.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:338180766481:android:abf72c5aae624b386deab0",
+        "android_client_info": {
+          "package_name": "com.marwadi.mindease"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDH4f1DdmJIPsNzLsITQCkFI_cTPisWVb8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

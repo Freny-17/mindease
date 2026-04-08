@@ -1,0 +1,55 @@
+name: mindease
+description: "A mental wellness and meditation application."
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.10.8
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # UI & Icons
+  cupertino_icons: ^1.0.8
+  flutter_staggered_grid_view: ^0.7.0
+  page_flip: ^0.2.3
+  fl_chart: ^0.66.0
+
+  # Firebase & Backend
+  firebase_core: ^2.30.0
+  firebase_auth: ^4.17.0
+  cloud_firestore: ^4.15.0
+
+  # State Management & Storage
+  provider: ^6.1.2
+  shared_preferences: ^2.2.3
+  flutter_dotenv: ^6.0.0
+
+  # Audio, Voice & Network
+  audioplayers: ^6.6.0
+  flutter_tts: ^3.8.3
+  translator: ^1.0.4+1
+  http: ^1.6.0
+  url_launcher: ^6.3.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+  change_app_package_name: ^1.5.0
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/flowers.jpg
+    - assets/forest.jpg
+    - assets/home.jpg
+    - assets/butterfly.jpg
+    - assets/logo/
+    - assets/sounds/
+    - assets/stories/
+    - assets/stories/en/
+    - assets/stories/hi/
+    - assets/stories/gu/
