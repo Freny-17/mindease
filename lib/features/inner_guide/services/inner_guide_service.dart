@@ -1,174 +1,174 @@
-// import 'dart:convert';
+import 'dart:convert';
 
-// import 'package:http/http.dart' as http;
+import 'package:http/http.dart' as http;
 
 
 
-// class InnerGuideService {
+class InnerGuideService {
 
 
-// // 🔑 Paste your GROQ API key here
+// 🔑 Paste your GROQ API key here
 
-//   final String apiKey = "gsk";
+  final String apiKey = "";
 
 
 
-//   final String systemPrompt = """
+  final String systemPrompt = """
 
-// You are a calm and supportive mental wellness assistant designed to help students and young adults think clearly during stressful situations.
+You are a calm and supportive mental wellness assistant designed to help students and young adults think clearly during stressful situations.
 
 
 
-// Follow these rules strictly:
+Follow these rules strictly:
 
 
 
-// Keep responses short and easy to read.
+Keep responses short and easy to read.
 
-// Use simple bullet points using the symbol •
+Use simple bullet points using the symbol •
 
-// Do not use markdown formatting.
+Do not use markdown formatting.
 
-// Do not use symbols like ** ### or any headings formatting.
+Do not use symbols like ** ### or any headings formatting.
 
-// Do not add extra headings beyond the structure below.
+Do not add extra headings beyond the structure below.
 
 
 
-// Always respond using this structure:
+Always respond using this structure:
 
 
 
-// Logical Explanation:
+Logical Explanation:
 
-// • Give 1 or 2 short logical points.
+• Give 1 or 2 short logical points.
 
 
 
-// Reality Check:
+Reality Check:
 
-// • Separate facts from assumptions in 1 or 2 points.
+• Separate facts from assumptions in 1 or 2 points.
 
 
 
-// Calm Guidance:
+Calm Guidance:
 
-// • Give 2 or 3 short helpful suggestions.
+• Give 2 or 3 short helpful suggestions.
 
 
 
-// Tone rules:
+Tone rules:
 
-// Stay calm, supportive, and non-judgmental.
+Stay calm, supportive, and non-judgmental.
 
-// Avoid sounding like a therapist.
+Avoid sounding like a therapist.
 
-// Avoid long paragraphs.
+Avoid long paragraphs.
 
-// """;
+""";
 
 
 
-//   Future<String> getResponse(String message) async {
+  Future<String> getResponse(String message) async {
 
 
 
-//     try {
+    try {
 
 
 
-//       final response = await http.post(
+      final response = await http.post(
 
-//         Uri.parse("https://api.groq.com/openai/v1/chat/completions"),
+        Uri.parse("https://api.groq.com/openai/v1/chat/completions"),
 
-//         headers: {
+        headers: {
 
-//           "Content-Type": "application/json",
+          "Content-Type": "application/json",
 
-//           "Authorization": "Bearer $apiKey"
+          "Authorization": "Bearer $apiKey"
 
-//         },
+        },
 
-//         body: jsonEncode({
+        body: jsonEncode({
 
-//           "model": "llama-3.1-8b-instant",
+          "model": "llama-3.1-8b-instant",
 
-//           "messages": [
+          "messages": [
 
-//             {
+            {
 
-//               "role": "system",
+              "role": "system",
 
-//               "content": systemPrompt
+              "content": systemPrompt
 
-//             },
+            },
 
-//             {
+            {
 
-//               "role": "user",
+              "role": "user",
 
-//               "content": message
+              "content": message
 
-//             }
+            }
 
-//           ],
+          ],
 
-//           "temperature": 0.7,
+          "temperature": 0.7,
 
-//           "max_tokens": 500
+          "max_tokens": 500
 
-//         }),
+        }),
 
-//       );
+      );
 
 
 
-// // Debug logs
+// Debug logs
 
-//       print("STATUS: ${response.statusCode}");
+      print("STATUS: ${response.statusCode}");
 
-//       print("BODY: ${response.body}");
+      print("BODY: ${response.body}");
 
 
 
-//       if (response.statusCode == 200) {
+      if (response.statusCode == 200) {
 
 
 
-//         final data = jsonDecode(response.body);
+        final data = jsonDecode(response.body);
 
 
 
-//         return data["choices"][0]["message"]["content"];
+        return data["choices"][0]["message"]["content"];
 
 
 
-//       } else {
+      } else {
 
 
 
-//         return "AI service error.";
+        return "AI service error.";
 
 
 
-//       }
+      }
 
 
 
-//     } catch (e) {
+    } catch (e) {
 
 
 
-//       print(e);
+      print(e);
 
 
 
-//       return "Connection problem. Please check internet.";
+      return "Connection problem. Please check internet.";
 
 
 
-//     }
+    }
 
-//   }
+  }
 
-// }
+}
