@@ -107,4 +107,18 @@ key.properties
 
 .DS_Store
 Thumbs.db
-
+.gradle/
+build/
+**/build/
+.dart_tool/
+.packages
+.pub/
+.flutter-plugins
+.flutter-plugins-dependencies
+.idea/
+*.log
+*.iml
+android/.gradle
+android/local.properties
+ios/Pods/
+ios/.symlinks/
