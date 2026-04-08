@@ -43,3 +43,68 @@ app.*.map.json
 /android/app/debug
 /android/app/profile
 /android/app/release
+
+# Flutter / Dart
+
+.dart_tool/
+.packages
+.pub-cache/
+.pub/
+build/
+
+# Flutter generated files
+
+.flutter-plugins
+.flutter-plugins-dependencies
+.metadata
+
+# Android
+
+/android/.gradle/
+/android/local.properties
+/android/app/build/
+/android/key.properties
+
+# iOS
+
+ios/Flutter/Flutter.framework
+ios/Flutter/App.framework
+ios/Flutter/Flutter.podspec
+ios/Pods/
+ios/.symlinks/
+
+# macOS
+
+macos/Flutter/ephemeral/
+
+# Windows
+
+windows/flutter/ephemeral/
+
+# Linux
+
+linux/flutter/ephemeral/
+
+# IDE
+
+.idea/
+.vscode/
+*.iml
+
+# Logs
+
+*.log
+
+# API Keys / Secrets
+
+.env
+.env.*
+*.keystore
+*.jks
+key.properties
+
+# Misc
+
+.DS_Store
+Thumbs.db
+
